@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sit737-task6c-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sit737-task6c
+  template:
+    metadata:
+      labels:
+        app: sit737-task6c
+    spec:
+      containers:
+        - name: sit737-task6c
+          image: manoz3896/sit737-2025-prac6c:v2
+          ports:
+            - containerPort: 3000
